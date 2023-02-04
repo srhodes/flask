@@ -11,10 +11,10 @@ app.config['SQLALCHEMY_ECHO'] = True
 connect_db(app)
 
 app.app_context().push()
-# book = Book(autho="Stephan", page_count=10)
+book = Book(autho="Stephan", page_count=10)
 
-# db.session.add(book)
-# db.session.commit()
+db.session.add(book)
+db.session.commit()
 
 @app.route('/')
 def say_hello():
